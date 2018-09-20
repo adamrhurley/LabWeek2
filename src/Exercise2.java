@@ -8,38 +8,19 @@ public class Exercise2 {
     {
         int i;
 
-
         JTextArea textArea = new JTextArea(14,30);
 
-
-       // textArea.setFont(textAreaFont);
-
-        //textArea.setText(String.format("%-10%-10s\n","Yard","Inches","\n-----","-----"));
-
-       textArea.setText("Yards     Inches\n");
+        textArea.setText("Yards     Inches\n");
         textArea.append("-----         ------");
-
-
-
 
         for(i=1; i<=10; i++)
         {
           int conversion = i*36;
 
-          textArea.append("\n    " + i + "           " + conversion);
-
-
-
+          textArea.append("\n    " + i + "          " + conversion);
         }
         JOptionPane.showMessageDialog(null,textArea,"Conversion",JOptionPane.PLAIN_MESSAGE);
+
         System.exit(0);
-
-
-
-
     }
-
-
-
-
 }

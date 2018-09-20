@@ -1,11 +1,13 @@
 import javax.swing.JOptionPane;
-//import javax.swing.JTextArea;
+import javax.swing.JTextArea;
 
 public class Exercise3 {
     public static void main(String[] args)
     {
         float length, breadth, area, costPer, cost;
-        String message, name, lengthAsString, breadthAsString, costPerAsString;
+        String /*message,*/ name, lengthAsString, breadthAsString, costPerAsString;
+
+        JTextArea textArea = new JTextArea(14,30);
 
         name = JOptionPane.showInputDialog("Please enter your name: ");
 
@@ -21,12 +23,14 @@ public class Exercise3 {
         area = length*breadth;
         cost = area*costPer;
 
-        message = "Quotation for "+ name + "\n" + "Length of room: " + length + " m" + "\nBrea" +
+        //textArea.setText(String.format("%-10s"));
+
+        textArea.append("Quotation for "+ name + "\n" + "Length of room: " + length + " m" + "\nBrea" +
                 "dth of room: " + breadth + " m" + "\nTotal area of the room: " + area + " sq." +
                 " m" + "\nCost per square meter of carpet: " + costPer + " euro" + "\nTotal cost of " +
-                "carpet: " + cost + " euro";
+                "carpet: " + cost + " euro");
 
-        JOptionPane.showMessageDialog(null,message,"Quotation ",JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null,textArea,"Quotation ",JOptionPane.PLAIN_MESSAGE);
 
     }
 }
